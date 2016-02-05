@@ -26,7 +26,7 @@ function usage() {
     echo "  To package with non-redistributable libraries"
     echo "    -p|--pack noredist|NOREDIST"
     echo "  To build a package for a distribution (mandatory)"
-    echo "    -d|--distribution centos7|centos63|fedora20|fedora21"
+    echo "    -d|--distribution centos7"
     echo "  To set the package release version (optional)"
     echo "  (default is 1 for normal and prereleases, empty for SNAPSHOT)"
     echo "    -r|--release version(integer)"
