@@ -65,19 +65,6 @@ under the License.
    </appender>
 
    <!-- ============================== -->
-   <!-- Append alerts to the syslog if it is configured -->
-   <!-- ============================== -->
-
-   <appender name="ALERTSYSLOG" class="org.apache.cloudstack.syslog.AlertsSyslogAppender">
-      <param name="Threshold" value="WARN"/>
-      <param name="SyslogHosts" value=""/>
-      <param name="Facility" value="LOCAL6"/>
-      <layout class="org.apache.log4j.PatternLayout">
-         <param name="ConversionPattern" value="%-5p [%c{3}] (%t:%x) %m%n"/>
-      </layout>
-   </appender>
-
-   <!-- ============================== -->
    <!-- Append messages to the console -->
    <!-- ============================== -->
 
@@ -166,7 +153,6 @@ under the License.
       <appender-ref ref="SYSLOG"/>
       <appender-ref ref="CONSOLE"/>
       <appender-ref ref="FILE"/>
-      <appender-ref ref="ALERTSYSLOG"/>
    </logger>
 
    <!-- ======================= -->
