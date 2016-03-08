@@ -11,6 +11,10 @@ In order to clone the Packaging repository please follow the steps below:
 3. Execute the following comment:
    - ./package_cosmic -d centos7 -f [path_to_cosmic]
 
+Once the build is done, the RPMs can be found at the following location:
+
+* packaging/dist/rpmbuild/RPMS/x86_64
+
 ## Dependencies
 
 Before packging the RPMs, please make sure that you have built Cosmic. Find out how to build Cosmic here: [Cosmic](https://github.com/MissionCriticalCloud/cosmic). 
