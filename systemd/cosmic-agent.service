@@ -13,7 +13,7 @@ Environment=JAVA_CLASS=com.cloud.agent.AgentShell
 ExecStart=/bin/sh -ec '\
     export ACP=`ls /usr/share/cosmic-agent/lib/*.jar /usr/share/cosmic-agent/plugins/*.jar 2>/dev/null|tr "\\n" ":"`; \
     export CLASSPATH="$ACP:/etc/cosmic/agent:/usr/share/cosmic-common/scripts"; \
-    ${JAVA_HOME}/bin/java -Xms${JAVA_HEAP_INITIAL} -Xmx${JAVA_HEAP_MAX} -cp "$CLASSPATH" $JAVA_CLASS'
+    ${JAVA_HOME}/bin/java -Xms${JAVA_HEAP_INITIAL} -Xmx${JAVA_HEAP_MAX} ${JAVA_REMOTE_DEBUG} -cp "$CLASSPATH" $JAVA_CLASS'
 Restart=always
 RestartSec=10s
 
