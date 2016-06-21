@@ -124,12 +124,6 @@ cp      %{_sourcecodefolder}/cosmic-plugin-hypervisor-kvm/target/dependencies/* 
 # No scripts should be present in the Agent cloud-nucleo jar; otherwise we might face classpath order problems.
 zip    -d ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib/cloud-nucleo-%{_maventag}.jar scripts*
 
-#License files from whisker
-install -D %{_sourcecodefolder}/cosmic-core/tools/whisker/NOTICE ${RPM_BUILD_ROOT}%{_defaultdocdir}/%{name}-common-%{version}/NOTICE
-install -D %{_sourcecodefolder}/cosmic-core/tools/whisker/LICENSE ${RPM_BUILD_ROOT}%{_defaultdocdir}/%{name}-common-%{version}/LICENSE
-install -D %{_sourcecodefolder}/cosmic-core/tools/whisker/NOTICE ${RPM_BUILD_ROOT}%{_defaultdocdir}/%{name}-agent-%{version}/NOTICE
-install -D %{_sourcecodefolder}/cosmic-core/tools/whisker/LICENSE ${RPM_BUILD_ROOT}%{_defaultdocdir}/%{name}-agent-%{version}/LICENSE
-
 %clean
 [ ${RPM_BUILD_ROOT} != "/" ] && rm -rf ${RPM_BUILD_ROOT}
 
