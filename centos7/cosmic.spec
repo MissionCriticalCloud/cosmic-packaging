@@ -179,8 +179,6 @@ fi
 %attr(0644,root,root) %{python_sitearch}/cloud_utils.pyc
 %attr(0644,root,root) %{python_sitearch}/cloudutils/*
 %attr(0644, root, root) %{_datadir}/%{name}-common/lib/jasypt-1.9.2.jar
-%{_defaultdocdir}/%{name}-common-%{version}/LICENSE
-%{_defaultdocdir}/%{name}-common-%{version}/NOTICE
 
 
 #################################
@@ -199,5 +197,3 @@ fi
 %attr(0644,root,root) %{_datadir}/%{name}-agent/lib/*.jar
 %attr(0755,root,root) %{_datadir}/%{name}-agent/lib/libvirtqemuhook
 %dir %{_datadir}/%{name}-agent/plugins
-%{_defaultdocdir}/%{name}-agent-%{version}/LICENSE
-%{_defaultdocdir}/%{name}-agent-%{version}/NOTICE
