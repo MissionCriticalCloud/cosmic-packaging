@@ -117,9 +117,9 @@ install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/libvirtqemuhook 
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cloud-ssh ${RPM_BUILD_ROOT}%{_bindir}/%{name}-ssh
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cosmic-agent-profile.sh ${RPM_BUILD_ROOT}%{_sysconfdir}/profile.d/%{name}-agent-profile.sh
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cosmic-agent.logrotate ${RPM_BUILD_ROOT}%{_sysconfdir}/logrotate.d/%{name}-agent
-install -D %{_sourcecodefolder}/cosmic-plugin-hypervisor-kvm/target/cloud-plugin-hypervisor-kvm-%{_maventag}.jar ${RPM_BUILD_ROOT}%{_datadir}/%name-agent/lib/cloud-plugin-hypervisor-kvm-%{_maventag}.jar
+install -D %{_sourcecodefolder}/cosmic-core/plugins/hypervisor/kvm/target/cloud-plugin-hypervisor-kvm-%{_maventag}.jar ${RPM_BUILD_ROOT}%{_datadir}/%name-agent/lib/cloud-plugin-hypervisor-kvm-%{_maventag}.jar
 
-cp      %{_sourcecodefolder}/cosmic-plugin-hypervisor-kvm/target/dependencies/*  ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib
+cp      %{_sourcecodefolder}/cosmic-core/plugins/hypervisor/kvm/target/dependencies/*  ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib
 
 # No scripts should be present in the Agent cloud-nucleo jar; otherwise we might face classpath order problems.
 zip    -d ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib/cloud-nucleo-%{_maventag}.jar scripts*
