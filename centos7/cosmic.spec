@@ -91,7 +91,7 @@ mkdir -p ${RPM_BUILD_ROOT}%{_datadir}/%{name}-common/scripts
 mkdir -p ${RPM_BUILD_ROOT}%{_datadir}/%{name}-common/vms
 mkdir -p ${RPM_BUILD_ROOT}%{python_sitearch}/
 mkdir -p ${RPM_BUILD_ROOT}%/usr/bin
-cp -r      %{_sourcecodefolder}/cosmic-core/scripts/* ${RPM_BUILD_ROOT}%{_datadir}/%{name}-common/scripts
+cp -r      %{_sourcecodefolder}/cosmic-core/scripts/src/main/resources/scripts/* ${RPM_BUILD_ROOT}%{_datadir}/%{name}-common/scripts
 install -D %{_sourcecodefolder}/cosmic-core/systemvm/dist/systemvm.iso ${RPM_BUILD_ROOT}%{_datadir}/%{name}-common/vms/systemvm.iso
 install    %{_sourcecodefolder}/cosmic-core/python/lib/cloud_utils.py ${RPM_BUILD_ROOT}%{python_sitearch}/cloud_utils.py
 cp -r      %{_sourcecodefolder}/cosmic-core/python/lib/cloudutils ${RPM_BUILD_ROOT}%{python_sitearch}/
@@ -120,9 +120,6 @@ install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cosmic-agent.log
 install -D %{_sourcecodefolder}/cosmic-core/plugins/hypervisor/kvm/target/cloud-plugin-hypervisor-kvm-%{_maventag}.jar ${RPM_BUILD_ROOT}%{_datadir}/%name-agent/lib/cloud-plugin-hypervisor-kvm-%{_maventag}.jar
 
 cp      %{_sourcecodefolder}/cosmic-core/plugins/hypervisor/kvm/target/dependencies/*  ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib
-
-# No scripts should be present in the Agent cloud-nucleo jar; otherwise we might face classpath order problems.
-zip    -d ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib/cloud-nucleo-%{_maventag}.jar scripts*
 
 %clean
 [ ${RPM_BUILD_ROOT} != "/" ] && rm -rf ${RPM_BUILD_ROOT}
