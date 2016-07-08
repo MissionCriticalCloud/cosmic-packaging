@@ -110,7 +110,6 @@ mkdir -p ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/plugins
 install -D %{_packagefolder}/systemd/cosmic-agent.service ${RPM_BUILD_ROOT}%{_unitdir}/%{name}-agent.service
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/agent.properties ${RPM_BUILD_ROOT}%{_sysconfdir}/%{name}/agent/agent.properties
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/environment.properties ${RPM_BUILD_ROOT}%{_sysconfdir}/%{name}/agent/environment.properties
-install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/log4j-cloud.xml ${RPM_BUILD_ROOT}%{_sysconfdir}/%{name}/agent/log4j-cloud.xml
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cloud-setup-agent ${RPM_BUILD_ROOT}%{_bindir}/%{name}-setup-agent
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cosmic-agent-upgrade ${RPM_BUILD_ROOT}%{_bindir}/%{name}-agent-upgrade
 install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/libvirtqemuhook ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib/libvirtqemuhook
