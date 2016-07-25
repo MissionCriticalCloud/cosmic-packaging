@@ -119,6 +119,7 @@ install -D %{_sourcecodefolder}/cosmic-agent/target/transformed/cosmic-agent.log
 install -D %{_sourcecodefolder}/cosmic-core/plugins/hypervisor/kvm/target/cloud-plugin-hypervisor-kvm-%{_maventag}.jar ${RPM_BUILD_ROOT}%{_datadir}/%name-agent/lib/cloud-plugin-hypervisor-kvm-%{_maventag}.jar
 
 cp      %{_sourcecodefolder}/cosmic-core/plugins/hypervisor/kvm/target/dependencies/*  ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib
+cp      %{_sourcecodefolder}/cosmic-agent/target/dependencies/*  ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib
 
 # No scripts should be present in the Agent cloud-nucleo jar; otherwise we might face classpath order problems.
 zip    -d ${RPM_BUILD_ROOT}%{_datadir}/%{name}-agent/lib/cloud-nucleo-%{_maventag}.jar scripts*
